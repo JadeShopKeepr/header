@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ua">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>uNIVERSITYsTAFF</title>
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/slick.css" />
+    <link rel="stylesheet" href="css/jquery.fancybox.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="bg">
+      <header class="header">
+        <div class="logo">
+          <img src="/firstOne/images/logo.svg" alt="" class="logo__img" />
+          <div class="logo__text">
+            <h3 class="logo__title">BAO</h3>
+            <p class="logo__subtitle">Напевне найкращі кросівки в світі</p>
+          </div>
+        </div>
+        <nav class="nav">
+          <ul class="nav__list">
+            <li class="list__item active">
+              <a href="#" class="item__link">
+                <span class="text">Головна</span>
+                <span class="icon">
+                  <ion-icon name="home-outline"></ion-icon>
+                </span>
+              </a>
+            </li>
+            <li class="list__item">
+              <a href="#" class="item__link">
+                <span class="text">Новини</span>
+                <span class="icon">
+                  <ion-icon name="help-outline"></ion-icon>
+                </span>
+              </a>
+            </li>
+            <li class="list__item">
+              <a href="#" class="item__link">
+                <span class="text">Ціни</span>
+                <span class="icon">
+                  <ion-icon name="cash-outline"></ion-icon>
+                </span>
+              </a>
+            </li>
+            <li class="list__item">
+              <a href="#">
+                <span class="text">Контакти</span>
+                <span class="icon">
+                  <ion-icon name="call-outline"></ion-icon>
+                </span>
+              </a>
+            </li>
+            <li class="list__item">
+              <a href="#">
+                <span class="text">Блог</span>
+                <span class="icon"><ion-icon name="phone-portrait-outline"></ion-icon></span>
+                </span>
+              </a>
+            </li>
+            <div class="indicator"></div>
+          </ul>
+        </nav>
+        <div class="user">
+          <a href="#" class="signIn">Увійти</a>
+          <button class="signUp">Регістрaція</button>
+        </div>
+      </header>
+      <main class="main">
+        <div class="container"></div>
+      </main>
+      <footer class="footer">
+        <div class="container"></div>
+      </footer>
+    </div>
+    <script>
+       const listItem = document.querySelectorAll('.list__item'); 
+       function activeLink (){
+         listItem.forEach((item) => 
+         item.classList.remove('active'));
+         this.classList.add('active');
+         }
+         listItem.forEach((item) => 
+         item.addEventListener('click', activeLink));
+    </script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/jquery.fancybox.min.js"></script>
+  </body>
+</html>

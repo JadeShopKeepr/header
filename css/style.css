@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300&display=swap');
+*,
+*::after,
+*::before{
+   box-sizing: border-box;
+   font-family: 'Merriweather', serif;
+}
+
+.bg{
+   width: 100%;
+   height: 100vh;
+   background: #001e64;
+   background-size: 200% 200%;
+   animation: change 10s ease-out infinite;
+}
+
+   @keyframes change {
+   0%{
+      background-position: 50%;
+   }
+   50%{
+      background-position:100% 50%;
+   }
+   100%{
+      background-position: 50%;
+   }   
+} 
+
+
+header{
+   height: 90px;
+   width: 1220px;
+   margin: 0 10px;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+
+}
+
+.logo{
+   display: flex;
+   align-items: center;
+}
+.logo__img{
+   width: 60px;
+   height: 60px;
+}
+
+.logo__text{
+   margin-left: 5px;
+}
+
+.logo__title{
+   font-size: 24px;
+   color: aliceblue;
+   font-weight: 700;
+   margin-bottom: 5px;
+}
+
+.logo__subtitle{
+   font-size: 12px;
+   color: beige;
+   font-weight: 300;
+   font-style: italic;
+}
+
+.nav{
+   margin-top: -50px;
+   position: relative;
+   width: 400px;
+   height: 70px;
+   background: linear-gradient(45deg, #f5cd84, red );
+   background-size: 200%, 200%;
+   border-radius: 10px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   animation: change 10s ease-out infinite;
+}
+
+.nav ul{
+   display: flex;
+   width: 350px;
+}
+
+.nav ul li{
+   position: relative;
+   list-style: none;
+   width: 70px;
+   height: 70px;
+   z-index: 1;
+}
+
+.nav ul li a{
+   position: relative;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   width: 100%;
+   text-align: center;
+   font-weight: 300;
+
+}
+.nav ul li a .icon{
+   position: relative;
+   display: block;
+   line-height: 75px;
+   font-size: 1.5em;
+   text-align: center;
+   transition: .5s;
+   color: aliceblue;
+}
+.nav ul li.active a .icon{
+   transform: translateY(53px);
+
+}
+.nav ul li a .text{
+   display: block;
+   position: absolute;
+   color: aliceblue;
+   font-weight: 400;
+   font-size: 0.95em;
+   letter-spacing: 0.05em;
+   transition: 0.5s;
+   opacity: 0;   
+   font-family: 'Merriweather', serif;
+}
+.nav ul li.active a .text{
+   opacity: 1;
+}
+.indicator{
+   position: absolute;
+   width: 70px;
+   height: 70px;  
+   background: crimson;
+   top: 75%;
+   border-radius: 50%;
+   border: 6px solid #001e64;
+   transition: .5s;
+}
+
+.nav ul lI:nth-child(1).active ~ .indicator {
+   transform: translateX(calc(70px * 0));
+
+}
+.nav ul lI:nth-child(2).active ~ .indicator {
+   transform: translateX(calc(70px * 1));
+
+}
+.nav ul lI:nth-child(3).active ~ .indicator {
+   transform: translateX(calc(70px * 2));
+
+}
+.nav ul lI:nth-child(4).active ~ .indicator {
+   transform: translateX(calc(70px * 3));
+
+}
+.nav ul lI:nth-child(5).active ~ .indicator {
+   transform: translateX(calc(70px * 4));
+
+}
+
+.user{
+   display: flex;
+   justify-content: space-between;
+}
+
+.signIn{
+   padding: 0.7em 1.5em;
+ font-size: 12px;
+ text-transform: none;
+ text-decoration: none;
+ letter-spacing: 2.5px;
+ font-weight: 500;
+ color: #000;
+ background-color: #fff;
+ border: none;
+ border-radius: 45px;
+ box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+ transition: all 0.3s ease 0s;
+ cursor: pointer;
+ outline: none;
+ margin-right: 10px;   
+}
+
+.signIn:hover{
+   background-color: #2EE59D;
+ box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+ color: #fff;
+ transform: translateY(-7px);
+}
+.signIn:active{
+   transform: translateY(-1px);
+}
+
+.signUp{
+   display: block;
+   border: none;
+   background-color: crimson;
+   color: aliceblue;
+   transition: all 0.3s ease 0s;
+   border-radius: 20px;
+   
+}
+
+.signUp:hover{
+   background-color: #fff;
+ box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+ color: crimson;
+ transform: translateY(-7px);
+}
